@@ -2,9 +2,9 @@ import streamlit as st
 from langchain_helper import get_QA_chain, set_model
 
 st.title("Langhain Demo Chatbot ")
-st.caption("Developed by Muhammad Danish")
+st.caption("Developed by [Muhammad Danish](https://linkedin.com/danisaysskol)")
+st.caption("[GitHub Repo](https://github.com/danisaysskol/LANGCHAIN_DEMO)")
 
-# Initialize the model based on the selection in sidebar
 with st.sidebar:
     choice = st.radio(
         "Select a service to use:",
@@ -28,7 +28,7 @@ def get_response(question):
 # Text input that triggers on enter or button press
 question = st.text_input("Question: ", key="user_question", on_change=None)
 
-# Respond when there's input (either through Enter or Submit button)
+# Respond when there's input (through Enter)
 if question:
     response = get_response(question)
     st.header("Answer")
